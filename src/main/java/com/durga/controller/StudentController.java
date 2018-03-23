@@ -48,7 +48,7 @@ public class StudentController
 	}
 	 
 	@PostMapping(name="/api/createStudent",produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<?> createStudent( @RequestBody Student student)
+	public ResponseEntity<?> createStudent( @Valid @RequestBody Student student)
 	{
 		 MessageStatus message=new MessageStatus();
 		 message.setMessage("student is unable to create");

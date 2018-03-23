@@ -18,14 +18,17 @@ public class Student
       private int id;
 	 
 	  @Column(name="s_name")
+	  @NotEmpty(message="name is required")
       private String name;
-	  
+	  @NotEmpty(message="email is required")
 	  @Column(name="s_email")
       private String email;
 	  
+	  @NotEmpty(message="branch is required")
 	  @Column(name="s_branch")
       private String branch;
 	  
+	  @NotEmpty(message="gender is required")
 	  @Column(name="s_gender")
       private String gender;
 	public int getId() {
